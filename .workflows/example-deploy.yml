@@ -1,0 +1,18 @@
+name: Example Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'main'
+      target_name:
+        description: 'Deployment environment'
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deployed ${{ github.event.inputs.branch }} to ${{ github.event.inputs.target_name }}"
