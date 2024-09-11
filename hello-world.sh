@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "This is your main branch"
+echo "This is your example feature branch"
